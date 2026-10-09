@@ -1,5 +1,9 @@
+ const dns = require('dns');
+ dns.setServers(['8.8.8.8', '1.1.1.1']);
 const mongoose= require('mongoose');
-const url= 'mongodb://127.0.0.1:27017/hotel';
+require('dotenv').config();
+//   const url= process.env.local;
+const url=process.env.url;
 mongoose.connect(url);
 const db= mongoose.connection;
 db.on("connected",()=>{

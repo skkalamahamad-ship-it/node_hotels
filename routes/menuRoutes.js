@@ -76,5 +76,5 @@ router.post("/",async(req,res)=>{
                 res.status.json({err:"internal server error"});
             }
         })
-        // comment added for testing purpose
+        // comment added for testing purpose.
     module.exports= router;
